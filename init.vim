@@ -76,7 +76,9 @@ let NERDTreeWinSize=25
 " 在终端启动vim时，共享NERDTree
 let g:nerdtree_tabs_open_on_console_startup=1
 " 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let NERDTreeIgnore=['\.pyc','\~$','\.swp', '\.git$', '\.venv$', '\.pyc$', '__pycache__',
+                    \ '.vscode$'
+                    \ ]
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
