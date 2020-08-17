@@ -174,3 +174,29 @@ colorscheme gruvbox
 set background=dark
 highlight Normal guibg=NONE ctermbg=None
 
+" ======================================== 文件头设置(start) ========================================
+" --------------- shell ---------------
+autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
+function AddTitleForShell()
+        call append(0, "#!/bin/bash")
+        call append(1, "")
+endfunction
+
+" --------------- python3 ---------------
+autocmd BufNewFile *.py exec ":call AddTitleForPython3()"
+function AddTitleForPython3()
+        call append(0, "#!/usr/bin/env python3")
+        call append(1, "# -*- coding:utf-8 -*-")
+        call append(2, "")
+        call append(3, "'''")
+        call append(4, "@File :  ".expand("%:t").expand("  "))
+        call append(5, "@Desc :  ")
+        call append(6, "'''")
+        call append(7, "")
+        call append(8, "# The Python Standard Modules(Library) and Third Modules(Library)")
+        call append(9, "")
+        call append(10, "# User-defined Modules")
+        call append(11, "")
+endfunction
+
+" ======================================== 文件头设置(end) ========================================
