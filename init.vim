@@ -119,6 +119,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
+Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 "============================================================================
@@ -140,7 +142,7 @@ set hlsearch
 set helplang=cn
 set wildmenu
 set foldenable
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " ======================================== 设置状态栏格式(begin) ========================================
 set statusline=%1*\%<%.50F\                                     "显示文件名和文件路径
@@ -166,4 +168,9 @@ let g:rainbow_active = 1
 
 " --------------- vim-gitgutter -------
 set updatetime=300
+
+" --------------- morhetz/gruvbox -------
+colorscheme gruvbox
+set background=dark
+highlight Normal guibg=NONE ctermbg=None
 
